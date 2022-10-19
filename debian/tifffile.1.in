@@ -1,0 +1,27 @@
+[NAME]
+tifffile \- Read image and meta-data from TIFF, STK, LSM, OME-TIFF, and FluoView files.
+
+[SYNOPSIS]
+.B tifffile
+.RI [ options ] " files" ...
+
+[DESCRIPTION]
+Only a subset of the TIFF specification is supported, mainly uncompressed and
+losslessly compressed 1-32 bit integer as well as 32 and 64-bit float
+images, which are commonly used in scientific imaging.
+
+TIFF, the Tagged Image File Format, is under the control of Adobe Systems.
+STK and LSM are TIFF with custom extensions used by MetaMorph respectively
+Carl Zeiss MicroImaging. Currently only primary info records are read for
+STK, FluoView, and NIH image formats.
+
+[AUTHOR]
+Christoph Gohlke <http://www.lfd.uci.edu/~gohlke
+Laboratory for Fluorescence Dynamics, University of California, Irvine
+
+This  manual  page was written by Mathieu Malaterre <malat@debian.org> for
+the Debian GNU/Linux system, but may be used by others.
+
+[SEE ALSO]
+.BR tiffdump (1),
+.BR tiffinfo (1).

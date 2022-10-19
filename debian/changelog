@@ -1,0 +1,314 @@
+tifffile (20210830-2) unstable; urgency=medium
+
+  * Add python3-fsspec for tests
+  * Disable test that requires a file that is not available
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 27 Sep 2021 10:53:40 +0200
+
+tifffile (20210830-1) unstable; urgency=medium
+
+  * New upstream version 20210830
+  * Rediff patches
+  * Push Standards-Version to 4.6.0. No changes required
+  * Remove conflicts+replaces of outdated python-tifffile
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 27 Sep 2021 09:20:49 +0200
+
+tifffile (20210201-1) unstable; urgency=medium
+
+  * New upstream version 20210201
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 07 Feb 2021 10:34:29 +0100
+
+tifffile (20210108-1) unstable; urgency=medium
+
+  * New upstream version 20210108
+  * Rediff patches
+  * Push Standards-Version to 4.5.1. No changes needed
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 09 Jan 2021 14:32:35 +0100
+
+tifffile (20201208-1) unstable; urgency=medium
+
+  * New upstream version 20201208
+  * Rediff patches
+  * Add "Rules-Requires-Root: no" to d/control
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 11 Dec 2020 09:48:13 +0100
+
+tifffile (20201126-2) unstable; urgency=medium
+
+  * Disable another test that requires remote data
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 30 Nov 2020 10:18:53 +0100
+
+tifffile (20201126-1) unstable; urgency=medium
+
+  * New upstream version 20201126
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 30 Nov 2020 10:05:01 +0100
+
+tifffile (20201118-2) unstable; urgency=medium
+
+  * Skip more remote-data depending tests
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 20 Nov 2020 09:32:34 +0100
+
+tifffile (20201118-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Ole Streicher ]
+  * New upstream version 20201118
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 20 Nov 2020 08:56:22 +0100
+
+tifffile (20200717-2) unstable; urgency=low
+
+  * Add python3-lxml recommendation and test dependency
+  * Skip tests that require codec or private data
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 18 Jul 2020 10:54:06 +0200
+
+tifffile (20200717-1) unstable; urgency=low
+
+  * New upstream version 20200717. Fixes problems on big endian
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 18 Jul 2020 10:31:58 +0200
+
+tifffile (20200603-1) unstable; urgency=low
+
+  * Disable tests that require remote files
+  * Use CI tests provided by upstream
+  * Add gitlab-ci file
+  * New upstream version 20200603. Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 12 Jun 2020 12:06:49 +0200
+
+tifffile (20200511-1) unstable; urgency=low
+
+  [ Andreas Tille ]
+  * Move package to Debian Python Modules Team
+
+  [ Ole Streicher ]
+  * Put myself on uploaders list
+  * Rename binary package to python3-tifffile
+  * Don't install local script
+  * Push compat to 13
+  * Push Standards-Version to 4.5.0. No changes needed
+  * Don't install lsm2bin
+  * Fix d/watch to accept single-digit day and month
+  * New upstream version 20200511
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 15 May 2020 20:16:16 +0200
+
+tifffile (20181128-3) unstable; urgency=medium
+
+  * Drop python from test depends
+    Closes: #938668
+  * Test-Depends: python3
+  * Standards-Version: 4.4.1
+
+ -- Andreas Tille <tille@debian.org>  Mon, 20 Jan 2020 11:39:53 +0100
+
+tifffile (20181128-2) unstable; urgency=medium
+
+  * debhelper-compat 12
+  * Standards-Version: 4.4.0
+  * Use secure URI in Homepage field.
+  * Fix wrapper script
+    Closes: #939511, #938668
+
+ -- Andreas Tille <tille@debian.org>  Thu, 05 Sep 2019 21:37:34 +0200
+
+tifffile (20181128-1) unstable; urgency=medium
+
+  * New upstream version
+  * autopkgtest: Restrictions: allow-stderr
+    Closes: #895176
+  * Point Vcs fields to salsa.debian.org
+  * Standards-Version: 4.1.4
+  * d/rules: include /usr/share/dpkg/architecture.mk instead of manally
+    setting DEB_HOST_ARCH_ENDIAN
+  * The package does not really provide a Python module for inclusion into
+    other projects.  Thus the binary is renamed to tifffile.  It was
+    ported to Python3 by upstream - thus the Python3 Build-Depends
+  * Point watch file to PyPI
+    Closes: #912661
+  * Standards-Version: 4.2.1
+  * Use --buildsystem=pybuild
+  * Build-Depends: python3-setuptools
+  * debian/rules: s/dh_numpy/dh_numpy3/
+  * Drop ancient X-Python-Version field
+
+ -- Andreas Tille <tille@debian.org>  Sat, 01 Dec 2018 07:52:43 +0100
+
+tifffile (20170929-1) unstable; urgency=medium
+
+  [ Andreas Tille ]
+  * New upstream version
+  * Depends: python-enum34, python-concurrent.futures
+    Closes: #889623
+  * debhelper 11
+  * cme fix dpkg-control
+
+  [ Sascha Steinbiss ]
+  * Update autopkgtest with new upstream test example.
+
+ -- Andreas Tille <tille@debian.org>  Mon, 05 Feb 2018 14:02:32 +0100
+
+tifffile (20170914-1) unstable; urgency=medium
+
+  [ Mathieu Malaterre ]
+  * Remove self from Uploaders
+
+  [ Andreas Tille ]
+  * New upstream version
+  * Moved packaging from SVN to Git
+  * Standards-Version: 4.1.1
+  * debhelper 10
+  * Add Upstream-Contact to d/copyright
+
+ -- Andreas Tille <tille@debian.org>  Thu, 05 Oct 2017 23:28:38 +0200
+
+tifffile (20151006-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version.
+  * Enable full hardening.
+  * Bump Standards-Version.
+  * Use secure Vcs-Browser.
+  * Add autopkgtest.
+
+ -- Sascha Steinbiss <satta@debian.org>  Sat, 14 Jan 2017 07:53:53 +0000
+
+tifffile (20150817-1) unstable; urgency=medium
+
+  * New upstream version
+  * Add myself to Uploaders
+  * cme fix dpkg-control
+  * fix watch file
+  * delete unused debian/get-orig-source
+  * fixed DEP5
+
+ -- Andreas Tille <tille@debian.org>  Sun, 08 Nov 2015 22:54:28 +0100
+
+tifffile (20140824-1) unstable; urgency=low
+
+  * New upstream
+  * Remove, patch applied upstream:
+    debian/patches/bug730166.patch
+
+ -- Mathieu Malaterre <malat@debian.org>  Fri, 12 Sep 2014 15:07:51 +0200
+
+tifffile (20140205-1) unstable; urgency=low
+
+  * New upstream
+  * Bump Std-Vers to 3.9.5, no changes needed
+
+ -- Mathieu Malaterre <malat@debian.org>  Fri, 14 Feb 2014 10:08:25 +0100
+
+tifffile (20131103-1) unstable; urgency=low
+
+  * New upstream
+  * Add support for MicroManager files
+  * Fix tifffile when no option is passed. Closes: #730166
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 21 Nov 2013 18:05:24 +0100
+
+tifffile (20130502-1) unstable; urgency=low
+
+  * New upstream
+  * Upload to sid
+
+ -- Mathieu Malaterre <malat@debian.org>  Tue, 21 May 2013 11:01:48 +0200
+
+tifffile (20130118-1) experimental; urgency=low
+
+  * New upstream
+  * Rename package to follow python policy
+  * Add Conflicts/Replaces with tifffile
+  * Use compat 9 to get harderning flag
+  * Really fix compilation on big endian machine
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 24 Jan 2013 18:00:44 +0100
+
+tifffile (20121214-1) experimental; urgency=low
+
+  * New upstream
+  * Fix compilation on big endian machine (arm & mips)
+  * Use CFLAGS/LDFLAGS for hardening goal
+
+ -- Mathieu Malaterre <malat@debian.org>  Sun, 13 Jan 2013 17:23:57 +0100
+
+tifffile (20121018-1) experimental; urgency=low
+
+  * New upstream
+    - Handle unpacking of RGB data
+    - Fix issue with numpy/Python 3.x
+  * Move mathplotlib to Recommends since not required
+  * Make sure to use numpy >= 1.6.2
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 08 Nov 2012 15:11:47 +0100
+
+tifffile (20120421-1) unstable; urgency=low
+
+  * New upstream
+  * Remove DMUA flag
+  * Change to my @d.o alias
+
+ -- Mathieu Malaterre <malat@debian.org>  Sun, 22 Apr 2012 10:03:28 +0200
+
+tifffile (20120308-1) unstable; urgency=low
+
+  * New upstream
+   - Add support for StructuredAnnotations in OME/TIFF.
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Wed, 21 Mar 2012 22:03:57 +0100
+
+tifffile (20120223-1) unstable; urgency=low
+
+  * New upstream
+   - Handle LSM510 bug
+  * Fix d/rules to handle big-endian machine.
+  * d/rules: add missing call to dh_numpy.
+  * Bump Std-Vers to 3.9.3, no changes needed
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Mon, 05 Mar 2012 10:41:19 +0100
+
+tifffile (20120101-1) unstable; urgency=low
+
+  * New upstream
+  * Better support for writing out BigTIFF
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Mon, 16 Jan 2012 12:08:32 +0100
+
+tifffile (20111215-2) unstable; urgency=low
+
+  * New upstream. Remove deprecated options
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Mon, 19 Dec 2011 12:07:48 +0100
+
+tifffile (20111126-1) unstable; urgency=low
+
+  * New upstream. Better support for BigTIFF
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Fri, 02 Dec 2011 09:40:39 +0100
+
+tifffile (20111112-1) unstable; urgency=low
+
+  * Initial Debian Upload (Closes: #648767)
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Sun, 13 Nov 2011 19:41:37 +0100

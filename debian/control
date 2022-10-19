@@ -1,0 +1,42 @@
+Source: tifffile
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Andreas Tille <tille@debian.org>,
+           Ole Streicher <olebole@debian.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+               python3-numpy
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/python-team/packages/tifffile
+Vcs-Git: https://salsa.debian.org/python-team/packages/tifffile.git
+Homepage: https://www.lfd.uci.edu/~gohlke/
+Rules-Requires-Root: no
+
+Package: python3-tifffile
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends}
+Recommends: python3-matplotlib, python3-lxml
+Conflicts: tifffile
+Provides: ${python3:Provides}, tifffile
+Replaces: tifffile
+Suggests: python3-fsspec
+Description: Read and write image data from and to TIFF files
+ Image and meta-data can be read from TIFF, BigTIFF, OME-TIFF, STK, LSM, NIH,
+ ImageJ, MicroManager, FluoView, SEQ and GEL files.
+ .
+ Only a subset of the TIFF specification is supported, mainly uncompressed and
+ losslessly compressed 2**(0 to 6) bit integer, 16, 32 and 64-bit float,
+ grayscale and RGB(A) images, which are commonly used in bio-scientific imaging.
+ Specifically, reading JPEG/CCITT compressed image data or EXIF/IPTC/GPS/XMP
+ meta-data is not implemented. Only primary info records are read for STK,
+ FluoView, MicroManager, and NIH image formats.
+ .
+ TIFF, the Tagged Image File Format, is under the control of Adobe Systems.
+ BigTIFF allows for files greater than 4 GB. STK, LSM, FluoView, SEQ, GEL, and
+ OME-TIFF, are custom extensions defined by MetaMorph, Carl Zeiss MicroImaging,
+ Olympus, Media Cybernetics, Molecular Dynamics, and the Open Microscopy
+ Environment consortium respectively.

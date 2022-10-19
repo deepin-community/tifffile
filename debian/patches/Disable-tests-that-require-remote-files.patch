@@ -1,0 +1,102 @@
+From: Ole Streicher <olebole@debian.org>
+Date: Sat, 16 May 2020 18:10:59 +0200
+Subject: Disable tests that require remote files
+
+---
+ tests/test_tifffile.py | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/tests/test_tifffile.py b/tests/test_tifffile.py
+index b7bd155..f4ff12c 100644
+--- a/tests/test_tifffile.py
++++ b/tests/test_tifffile.py
+@@ -173,7 +173,7 @@ from tifffile.tifffile import (
+ )
+ 
+ # skip certain tests
+-SKIP_LARGE = False  # skip tests requiring large memory
++SKIP_LARGE = True  # skip tests requiring large memory
+ SKIP_EXTENDED = False
+ SKIP_PUBLIC = False  # skip public files
+ SKIP_PRIVATE = False  # skip private files
+@@ -467,6 +467,7 @@ def test_issue_imread_kwargs_legacy():
+ 
+ 
+ @pytest.mark.skipif(SKIP_PRIVATE, reason=REASON)
++@pytest.mark.skip(reason="file not available")
+ def test_issue_infinite_loop():
+     """Test infinite loop reading more than two tags of same code in IFD."""
+     # Reported by D. Hughes on 2019.7.26
+@@ -1910,6 +1911,7 @@ def test_class_omexml_fail(shape, storedshape, dtype, axes, error):
+     ],
+ )
+ @pytest.mark.parametrize('metadata', ('axes', None))
++@pytest.mark.skip(reason="remote connection not available")
+ def test_class_omexml(axes, autoaxes, shape, storedshape, dimorder, metadata):
+     """Test OmeXml class."""
+     dtype = numpy.uint8
+@@ -2000,6 +2002,7 @@ def test_class_omexml(axes, autoaxes, shape, storedshape, dimorder, metadata):
+         ),
+     ],
+ )
++@pytest.mark.skip(reason="remote connection not available")
+ def test_class_omexml_modulo(axes, shape, storedshape, sizetzc, dimorder):
+     """Test OmeXml class with modulo dimensions."""
+     dtype = numpy.uint8
+@@ -2013,6 +2016,7 @@ def test_class_omexml_modulo(axes, shape, storedshape, sizetzc, dimorder):
+     assert_valid_omexml(omexml)
+ 
+ 
++@pytest.mark.skip(reason="remote connection not available")
+ def test_class_omexml_attributes():
+     """Test OmeXml class with attributes and elements."""
+     from uuid import uuid1  # noqa: delayed import
+@@ -2055,6 +2059,7 @@ def test_class_omexml_attributes():
+     assert '\n  ' in str(omexml)
+ 
+ 
++@pytest.mark.skip(reason="remote connection not available")
+ def test_class_omexml_multiimage():
+     """Test OmeXml class with multiple images."""
+     omexml = OmeXml(description='multiimage')
+@@ -2955,7 +2960,7 @@ def test_func_pformat_xml():
+     )
+ 
+     assert pformat(value, height=8, width=60) == (
+-        """<?xml version='1.0' encoding='ISO-8859-1'?>
++        """<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <Dimap_Document name="band2.dim">
+  <Metadata_Id>
+   <METADATA_FORMAT version="2.12.1">DIMAP</METADATA_FORMAT>
+@@ -3180,6 +3185,7 @@ def assert_filehandle(fh, offset=0):
+ 
+ 
+ @pytest.mark.skipif(SKIP_HTTP, reason=REASON)
++@pytest.mark.skip(reason="remote connection not available")
+ def test_filehandle_seekable():
+     """Test FileHandle must be seekable."""
+     from urllib.request import HTTPHandler, build_opener
+@@ -9458,6 +9464,7 @@ def test_write_codecs(mode, tile, codec):
+     'dtype', ['u1', 'u2', 'u4', 'i1', 'i2', 'i4', 'f2', 'f4', 'f8']
+ )
+ @pytest.mark.parametrize('byteorder', ['>', '<'])
++@pytest.mark.skipif(SKIP_PUBLIC, reason=REASON)
+ def test_write_predictor(byteorder, dtype, tile, mode):
+     """Test predictors."""
+     tile = (32, 32) if tile else None
+@@ -13175,6 +13182,7 @@ def test_write_imagej_raw():
+         ((2, 3, 4, 5, 6, 7, 32, 32, 3), 'TQCPZRYXS'),
+     ],
+ )
++@pytest.mark.skip(reason="remote connection not available")
+ def test_write_ome(shape, axes):
+     """Test write OME-TIFF format."""
+     photometric = None
+@@ -13362,6 +13370,7 @@ def test_write_ome_methods(method):
+ 
+ 
+ @pytest.mark.parametrize('contiguous', [True, False])
++@pytest.mark.skip(reason="remote connection not available")
+ def test_write_ome_manual(contiguous):
+     """Test writing OME-TIFF manually."""
+     data = numpy.random.randint(0, 255, (19, 31, 21), numpy.uint8)

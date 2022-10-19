@@ -1,0 +1,2 @@
+Test-Command: cd tests; python3 -m pytest -v
+Depends: @, python3, python3-pytest, python3-lxml, python3-fsspec

@@ -9,7 +9,7 @@ Build-Depends: debhelper-compat (= 13),
                python3-all,
                python3-setuptools,
                python3-numpy
-Standards-Version: 4.6.0
+Standards-Version: 4.7.2
 Vcs-Browser: https://salsa.debian.org/python-team/packages/tifffile
 Vcs-Git: https://salsa.debian.org/python-team/packages/tifffile.git
 Homepage: https://www.lfd.uci.edu/~gohlke/
@@ -19,11 +19,11 @@ Package: python3-tifffile
 Architecture: all
 Depends: ${python3:Depends},
          ${misc:Depends}
-Recommends: python3-matplotlib, python3-lxml
-Conflicts: tifffile
-Provides: ${python3:Provides}, tifffile
-Replaces: tifffile
+Recommends: python3-matplotlib,
+            python3-lxml
 Suggests: python3-fsspec
+Provides: ${python3:Provides},
+          tifffile
 Description: Read and write image data from and to TIFF files
  Image and meta-data can be read from TIFF, BigTIFF, OME-TIFF, STK, LSM, NIH,
  ImageJ, MicroManager, FluoView, SEQ and GEL files.

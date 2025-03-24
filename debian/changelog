@@ -1,3 +1,317 @@
+tifffile (20250313-1) unstable; urgency=medium
+
+  * New upstream version 20250313
+  * Rediff patches
+  * Push Standards-Version to 4.7.2, no changes needed
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 14 Mar 2025 16:50:25 +0100
+
+tifffile (20250218-1) unstable; urgency=medium
+
+  * New upstream version 20250218
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 22 Feb 2025 13:10:38 +0100
+
+tifffile (20250110-1) unstable; urgency=medium
+
+  * New upstream version 20250110
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 11 Jan 2025 14:21:57 +0100
+
+tifffile (20241212-1) unstable; urgency=medium
+
+  * New upstream version 20241212
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 13 Dec 2024 07:30:33 +0100
+
+tifffile (20240920-1) unstable; urgency=medium
+
+  * New upstream version 20240920
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 21 Sep 2024 11:59:51 +0200
+
+tifffile (20240830-1) unstable; urgency=medium
+
+  * New upstream version 20240830
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 01 Sep 2024 13:16:50 +0200
+
+tifffile (20240824-1) unstable; urgency=medium
+
+  * New upstream version 20240824
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 26 Aug 2024 11:55:05 +0200
+
+tifffile (20240810-1) unstable; urgency=medium
+
+  * New upstream version 20240810
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 13 Aug 2024 10:54:22 +0200
+
+tifffile (20240724-1) unstable; urgency=medium
+
+  * New upstream version 20240724
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 24 Jul 2024 10:20:18 +0200
+
+tifffile (20240721-1) unstable; urgency=medium
+
+  * New upstream version 20240721. Closes: #1075798
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 22 Jul 2024 10:07:50 +0200
+
+tifffile (20240702-1) unstable; urgency=medium
+
+  * New upstream version 20240702
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 03 Jul 2024 09:31:50 +0200
+
+tifffile (20240618-1) unstable; urgency=medium
+
+  * New upstream version 20240618
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 20 Jun 2024 18:21:06 +0200
+
+tifffile (20240522-1) unstable; urgency=medium
+
+  * New upstream version 20240522
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 24 May 2024 08:18:53 +0200
+
+tifffile (20240510-1) unstable; urgency=medium
+
+  * New upstream version 20240510
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 18 May 2024 14:08:52 +0200
+
+tifffile (20240424-1) unstable; urgency=medium
+
+  * New upstream version 20240424
+  * Rediff patches
+  * Push Standards-Version to 4.7.0. No changes needed
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 25 Apr 2024 08:08:59 +0200
+
+tifffile (20240418-1) unstable; urgency=medium
+
+  * New upstream version 20240418
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 18 Apr 2024 07:54:48 +0200
+
+tifffile (20240212-1) unstable; urgency=medium
+
+  * New upstream version 20240212
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 13 Feb 2024 08:09:35 +0100
+
+tifffile (20240130-1) unstable; urgency=medium
+
+  * New upstream version 20240130
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 04 Feb 2024 13:38:06 +0100
+
+tifffile (20231209-1) unstable; urgency=medium
+
+  * New upstream version 20231209
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 11 Dec 2023 09:46:06 +0100
+
+tifffile (20230926-1) unstable; urgency=medium
+
+  * New upstream version 20230926
+  * Rediff patches
+  * Add missing pytest.mark.skipif
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 27 Sep 2023 10:37:55 +0200
+
+tifffile (20230918-1) unstable; urgency=medium
+
+  * New upstream version 20230918
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 19 Sep 2023 09:36:47 +0200
+
+tifffile (20230830-1) unstable; urgency=medium
+
+  * New upstream version 20230830
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 02 Sep 2023 11:51:22 +0200
+
+tifffile (20230825-1) unstable; urgency=medium
+
+  * New upstream version 20230825
+  * Rediff patches
+  * Put egg-info files (recreated during build) into d/clean (Closes: #1047381)
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 26 Aug 2023 10:01:38 +0200
+
+tifffile (20230718-1) unstable; urgency=medium
+
+  * New upstream version 20230718
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 25 Jul 2023 10:14:52 +0200
+
+tifffile (20230710-1) unstable; urgency=medium
+
+  * New upstream version 20230710
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 12 Jul 2023 14:59:47 +0200
+
+tifffile (20230704-1) unstable; urgency=medium
+
+  * New upstream version 20230704
+  * Drop Add-missing-SKIP_PRIVATE...patch: applied upstream
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 05 Jul 2023 09:51:51 +0200
+
+tifffile (20230412-1) unstable; urgency=medium
+
+  * New upstream version 20230412
+  * Rediff patches
+  * Remove outdated Breaks/Conflicts: tifffile
+  * Add missing SKIP_PRIVATE for test_issue_invalid_predictor
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 23 Jun 2023 16:45:48 +0200
+
+tifffile (20230203-1) unstable; urgency=medium
+
+  * New upstream version 20230203
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 07 Feb 2023 20:19:41 +0100
+
+tifffile (20230123.1-1) unstable; urgency=medium
+
+  * New upstream version 20230123.1
+  * Rediff patches
+  * Push Standards-Version to 4.6.2. No changes
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 26 Jan 2023 21:05:54 +0100
+
+tifffile (20221010-1) unstable; urgency=medium
+
+  * New upstream version 20221010
+  * Rediff patches. Drop patch applied upstream
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 14 Oct 2022 14:11:26 +0200
+
+tifffile (20220812-2) unstable; urgency=medium
+
+  * Fix indentation error in test
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 14 Aug 2022 12:27:56 +0200
+
+tifffile (20220812-1) unstable; urgency=medium
+
+  * New upstream version 20220812
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 13 Aug 2022 13:48:59 +0200
+
+tifffile (20220803-1) unstable; urgency=medium
+
+  * New upstream version 20220803
+  * Rediff patches
+  * Push Standards-Version to 4.6.1. No changes needed
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 05 Aug 2022 14:37:01 +0200
+
+tifffile (20220504-1) unstable; urgency=medium
+
+  * New upstream version 20220504
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 09 Jun 2022 08:12:06 +0200
+
+tifffile (20220428-2) unstable; urgency=medium
+
+  * xfail tests that may require the 'imagecodecs' package
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 04 May 2022 11:48:15 +0200
+
+tifffile (20220428-1) unstable; urgency=medium
+
+  * New upstream version 20220428
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 02 May 2022 17:49:26 +0200
+
+tifffile (20220426-1) unstable; urgency=medium
+
+  * New upstream version 20220426
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 28 Apr 2022 17:48:49 +0200
+
+tifffile (20220422-1) unstable; urgency=medium
+
+  * New upstream version 20220422
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 23 Apr 2022 14:44:13 +0200
+
+tifffile (20220408-1) unstable; urgency=medium
+
+  * New upstream version 20220408
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 11 Apr 2022 15:07:22 +0200
+
+tifffile (20220325-1) unstable; urgency=medium
+
+  * New upstream version 20220325
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 29 Mar 2022 08:23:49 +0200
+
+tifffile (20220316-1) unstable; urgency=medium
+
+  * New upstream version 20220316
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 21 Mar 2022 16:34:33 +0100
+
+tifffile (20220209-1) unstable; urgency=medium
+
+  * New upstream version 20220209
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 14 Feb 2022 08:49:23 +0100
+
+tifffile (20220202-1) unstable; urgency=medium
+
+  * New upstream version 20220202
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 09 Feb 2022 10:09:55 +0100
+
+tifffile (20211102-1) unstable; urgency=medium
+
+  * New upstream version 20211102
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 17 Dec 2021 08:36:37 +0100
+
 tifffile (20210830-2) unstable; urgency=medium
 
   * Add python3-fsspec for tests

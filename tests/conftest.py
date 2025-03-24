@@ -1,7 +1,10 @@
 # tifffile/tests/conftest.py
 
+from __future__ import annotations
+
 import os
 import sys
+from typing import Any
 
 if os.environ.get('VSCODE_CWD'):
     # work around pytest not using PYTHONPATH in VSCode
@@ -10,14 +13,14 @@ if os.environ.get('VSCODE_CWD'):
     )
 
 if os.environ.get('SKIP_CODECS', None):
-    sys.modules['imagecodecs'] = None
+    sys.modules['imagecodecs'] = None  # type: ignore[assignment]
 
 
-def pytest_report_header(config):
+def pytest_report_header(config: Any, start_path: Any) -> Any:
     try:
         from numpy import __version__ as numpy
-        from tifffile import __version__ as tifffile
         from test_tifffile import config
+        from tifffile import __version__ as tifffile
 
         try:
             from imagecodecs import __version__ as imagecodecs
@@ -28,6 +31,14 @@ def pytest_report_header(config):
         except ImportError:
             zarr = 'N/A'
         try:
+            from dask import __version__ as dask
+        except ImportError:
+            dask = 'N/A'
+        try:
+            from xarray import __version__ as xarray
+        except ImportError:
+            xarray = 'N/A'
+        try:
             from fsspec import __version__ as fsspec
         except ImportError:
             fsspec = 'N/A'
@@ -36,6 +47,8 @@ def pytest_report_header(config):
             f'imagecodecs-{imagecodecs}, '
             f'numpy-{numpy}, '
             f'zarr-{zarr}, '
+            f'dask-{dask}, '
+            f'xarray-{xarray}, '
             f'fsspec-{fsspec}\n'
             f'test config: {config()}'
         )
@@ -43,4 +56,4 @@ def pytest_report_header(config):
         pass
 
 
-collect_ignore = ['_tmp', 'data']
+collect_ignore = ['_tmp', 'data', 'data-']

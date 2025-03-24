@@ -1,0 +1,21 @@
+From: Ole Streicher <olebole@debian.org>
+Date: Thu, 26 Jan 2023 21:29:02 +0100
+Subject: Skip large tests
+
+---
+ tests/test_tifffile.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/test_tifffile.py b/tests/test_tifffile.py
+index 24f3bd4..0719d4a 100644
+--- a/tests/test_tifffile.py
++++ b/tests/test_tifffile.py
+@@ -226,7 +226,7 @@ def skip(key: str, default: bool) -> bool:
+ 
+ 
+ # skip tests requiring large memory
+-SKIP_LARGE = skip('SKIP_LARGE', sys.maxsize < 2**32)
++SKIP_LARGE = skip('SKIP_LARGE', True)
+ SKIP_EXTENDED = skip('SKIP_EXTENDED', False)
+ # skip public files
+ SKIP_PUBLIC = skip('SKIP_PUBLIC', not os.path.exists(PUBLIC_DIR))

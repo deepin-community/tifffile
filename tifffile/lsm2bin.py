@@ -3,9 +3,11 @@
 
 """Convert TZCYX LSM file to series of BIN files.
 
-Usage: lsm2bin lsm_filename [bin_filename]
+Usage: ``lsm2bin lsm_filename [bin_filename]``
 
 """
+
+from __future__ import annotations
 
 import sys
 
@@ -18,7 +20,7 @@ except ImportError:
         from tifffile import lsm2bin
 
 
-def main(argv=None):
+def main(argv: list[str] | None = None) -> int:
     """Lsm2bin command line usage main function."""
     if argv is None:
         argv = sys.argv
@@ -27,6 +29,7 @@ def main(argv=None):
     else:
         print()
         print(__doc__.strip())
+    return 0
 
 
 if __name__ == '__main__':

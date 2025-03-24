@@ -1,2 +1,4 @@
 Don-t-install-lsm2bin.patch
 Disable-tests-that-require-remote-files.patch
+xfail-tests-that-may-require-the-imagecodecs-package.patch
+Skip-large-tests.patch

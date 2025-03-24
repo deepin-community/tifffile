@@ -1,0 +1,22 @@
+From: Ole Streicher <ole@aip.de>
+Date: Wed, 4 May 2022 11:46:58 +0200
+Subject: xfail tests that may require the 'imagecodecs' package
+
+The imagecodecs package is not packaged for Debian yet.
+---
+ tests/test_tifffile.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/tests/test_tifffile.py b/tests/test_tifffile.py
+index 681e91b..24f3bd4 100644
+--- a/tests/test_tifffile.py
++++ b/tests/test_tifffile.py
+@@ -5669,6 +5669,8 @@ def test_func_bitorder_decode():
+ def test_func_delta_codec(byteorder, kind):
+     """Test delta codec functions."""
+     from tifffile._imagecodecs import delta_decode, delta_encode
++    if sys.byteorder != 'little' and byteorder == '<':
++        pytest.xfail("may require require 'imagecodecs' package")
+ 
+     # if byteorder == '>' and numpy.dtype(kind).itemsize == 1:
+     #     pytest.skip('duplicate test')
